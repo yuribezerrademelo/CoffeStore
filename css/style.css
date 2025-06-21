@@ -1,0 +1,124 @@
+.gradient-background {
+  background: linear-gradient(300deg, #2c1919d7, #f56b0169, #83555579);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  background-color: rgb(39, 38, 38);
+}
+
+header .nav-link {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(250, 239, 224);
+}
+
+#navbar li a  {
+    position: relative;
+    transition: all 0.2s;
+}
+
+#navbar li a:hover{
+    color: rgb(129, 124, 116);
+    transform: scale(1.04);
+}
+
+#navbar li a.active::after, 
+#navbar li a:hover::after{
+    content: "";
+    width: 40%;
+    height: 4px;
+    border-radius:30px;
+    background:rgb(250, 239, 224);
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+}
+
+
+
+#logo{
+  margin-left: 30px;
+  width: 160px;
+  height: auto;
+  padding: 10px 15px;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: rgb(250, 239, 224);
+}
+
+
+#title h1{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 120px;
+  color: rgb(39, 38, 38);
+}
+
+#title button{
+  transition: all 0.2s;
+}
+
+#title button:hover{
+  transform: scale(1.08);
+}
+
+#title .titlebutton img {
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+#title .titlebutton{
+  transition: all 0.2s;
+  background-color: rgba(25, 25, 32, 0.349);
+  border:solid rgba(17, 0, 255, 0.068);
+  border-radius: 100px;
+}
+
+#title .titlebutton:hover{
+  background-color: rgba(25, 25, 32, 0.74);
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#features img {
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+#features .b-c {
+  transition: all 0.2s;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 50px;
+}
+
+#features .b-c:hover {
+  background-color: rgb(200, 202, 202);
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
