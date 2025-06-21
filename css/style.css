@@ -8,15 +8,17 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-header{
+header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   background-color: rgb(39, 38, 38);
 }
@@ -28,31 +30,31 @@ header .nav-link {
   color: rgb(250, 239, 224);
 }
 
-#navbar li a  {
-    position: relative;
-    transition: all 0.2s;
+#navbar li a {
+  position: relative;
+  transition: all 0.2s;
 }
 
-#navbar li a:hover{
-    color: rgb(129, 124, 116);
-    transform: scale(1.04);
+#navbar li a:hover {
+  color: rgb(129, 124, 116);
+  transform: scale(1.04);
 }
 
-#navbar li a.active::after, 
-#navbar li a:hover::after{
-    content: "";
-    width: 40%;
-    height: 4px;
-    border-radius:30px;
-    background:rgb(250, 239, 224);
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 40%;
+  height: 4px;
+  border-radius: 30px;
+  background: rgb(250, 239, 224);
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
 }
 
 
 
-#logo{
+#logo {
   margin-left: 30px;
   width: 160px;
   height: auto;
@@ -63,7 +65,7 @@ header .nav-link {
 }
 
 
-#title h1{
+#title h1 {
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
   font-style: normal;
@@ -71,50 +73,60 @@ header .nav-link {
   color: rgb(39, 38, 38);
 }
 
-#title button{
+#title .titlebutton {
+  margin: 0 20px;
+}
+
+#title button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.2s;
+  height: 90px;
+  width: 90px;
+  border-radius: 30px;
+  background-color: rgba(131, 128, 128, 0.349);
+  border: solid rgba(230, 230, 238, 0.068);
+  gap: 10px;
 }
 
-#title button:hover{
-  transform: scale(1.08);
-}
-
-#title .titlebutton img {
-  height: 150px;
-  width: 150px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50px;
-}
-
-#title .titlebutton{
-  transition: all 0.2s;
-  background-color: rgba(25, 25, 32, 0.349);
-  border:solid rgba(17, 0, 255, 0.068);
-  border-radius: 100px;
-}
-
-#title .titlebutton:hover{
+#title button:hover {
   background-color: rgba(25, 25, 32, 0.74);
   transform: scale(1.08);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#features img {
-  height: 150px;
-  width: 150px;
+#title button img {
+  height: 70px;
+  width: 70px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50px;
+  border-radius: 30px;
 }
+
+#features img {
+  height: 120px;
+  width: 120px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+
+#features .featuresbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
 
 #features .b-c {
   transition: all 0.2s;
   background-color: rgb(243, 243, 243);
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 #features .b-c:hover {
