@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sono:wght@200..800&display=swap"
     rel="stylesheet">
+  <script src="./js/scripts.js" defer></script>
   <title>CoffeStore</title>
 </head>
 
@@ -26,11 +27,22 @@
         <li><a href="#############" class="nav-link">Catálogo</a></li>
       </ul>
       <div class="flex col-md-3 text-end">
-        <a href="cartpage.html">
+        <a id="abrirmodal">
           <i class="fa-solid fa-basket-shopping fa-3x"></i>
         </a>
       </div>
     </header>
+  </section>
+
+  <section id="modalcart">
+    <div id="modal" class="hide">
+      <div id="headermodal"><h2>Pedido</h2>
+        <button id="continuar">Continuar</button>
+      </div>
+      <div id="bodymodal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa facere harum modi, optio
+        numquam, aliquam inventore aliquid, blanditiis molestiae incidunt ducimus consequuntur fuga. Quia perferendis
+        dignissimos vitae doloremque quibusdam?</div>
+    </div>
   </section>
 
 
@@ -135,9 +147,6 @@
 
     </div>
   </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
