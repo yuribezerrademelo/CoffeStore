@@ -5,26 +5,11 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
+  font-family: "Caveat", cursive;
 }
 
-.gradient-background {
-  background: linear-gradient(300deg, #2c1919d7, #f56b0169, #83555579);
-  background-size: 180% 180%;
-  animation: gradient-animation 8s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.backgroundtitle {
+  background-color: rgb(17, 16, 16);
 }
 
 header {
@@ -37,7 +22,6 @@ header {
 }
 
 header .nav-link {
-  font-family: "Caveat", cursive;
   font-weight: 700;
   font-size: 30px;
   color: rgb(250, 239, 224);
@@ -67,7 +51,7 @@ header .nav-link {
 
 #modal.hide {
   pointer-events: none;
-  opacity: 0;
+  opacity: 0; 
   right:0;
 }
 
@@ -81,7 +65,7 @@ header .nav-link {
   left: 80%;
   top: 300px;
   transform: translate(-5%, -30%);
-  background-color: white;
+  background-color: rgb(250, 239, 224);
   border-radius: .50rem;
   padding: 20px;
   max-width: 90%;
@@ -93,17 +77,25 @@ header .nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid rgb(250, 239, 224);
+  border-bottom: solid rgb(204, 187, 161);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
 
-#modal button {
-  background-color: rgb(250, 239, 224);
+#buttoncontinuar {
   border: none;
   border-radius: .25rem;
   color: black;
   font-weight: 500;
+  background-color: rgb(204, 187, 161);
+  font-size: 20px;
+  opacity: 0.8;
+  transition: 0.1s;
+}
+#buttoncontinuar:hover {
+  background-color: rgb(204, 187, 161);
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 #logo {
@@ -123,12 +115,19 @@ header .nav-link {
   transform: scale(1.06);
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10rem;
+}
+
 #title h1 {
-  font-family: "Caveat", cursive;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 120px;
-  color: rgb(39, 38, 38);
+  font-weight: 700;
+  font-size: 200px;
+  color: rgb(250, 239, 224);
 }
 
 #title .titlebutton {
@@ -140,9 +139,9 @@ header .nav-link {
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
-  height: 90px;
-  width: 90px;
-  border-radius: 30px;
+  height: 95px;
+  width: 100px;
+  border-radius: 45px;
   background-color: rgba(131, 128, 128, 0.349);
   border: solid rgba(230, 230, 238, 0.068);
   gap: 10px;
@@ -156,7 +155,7 @@ header .nav-link {
 
 #title button img {
   height: 60px;
-  width: 70px;
+  width: 100px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
