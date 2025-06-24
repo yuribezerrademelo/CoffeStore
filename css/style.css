@@ -1,58 +1,104 @@
-.gradient-background {
-  background: linear-gradient(300deg, #2c1919d7, #f56b0169, #83555579);
-  background-size: 180% 180%;
-  animation: gradient-animation 8s ease infinite;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Caveat", cursive;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.backgroundtitle {
+  background-color: rgb(17, 16, 16);
 }
 
-header{
+header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   background-color: rgb(39, 38, 38);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: sticky;
 }
 
 header .nav-link {
-  font-family: "Caveat", cursive;
   font-weight: 700;
   font-size: 30px;
   color: rgb(250, 239, 224);
 }
 
-#navbar li a  {
-    position: relative;
-    transition: all 0.2s;
+#navbar li a {
+  position: relative;
+  transition: all 0.2s;
 }
 
-#navbar li a:hover{
-    color: rgb(129, 124, 116);
-    transform: scale(1.04);
+#navbar li a:hover {
+  color: rgb(129, 124, 116);
+  transform: scale(1.04);
 }
 
-#navbar li a.active::after, 
-#navbar li a:hover::after{
-    content: "";
-    width: 40%;
-    height: 4px;
-    border-radius:30px;
-    background:rgb(250, 239, 224);
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 40%;
+  height: 4px;
+  border-radius: 30px;
+  background: rgb(250, 239, 224);
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
 }
 
+#modal.hide {
+  pointer-events: none;
+  opacity: 0; 
+  right:0;
+}
 
+#abrirmodal {
+  cursor: pointer;
+}
 
-#logo{
+#modal {
+  height: 40rem;
+  position: absolute;
+  left: 80%;
+  top: 300px;
+  transform: translate(-5%, -30%);
+  background-color: rgb(250, 239, 224);
+  border-radius: .50rem;
+  padding: 20px;
+  max-width: 90%;
+  z-index: 15;
+  transition: 0.2s;
+}
+
+#modal #headermodal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid rgb(204, 187, 161);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#buttoncontinuar {
+  border: none;
+  border-radius: .25rem;
+  color: black;
+  font-weight: 500;
+  background-color: rgb(204, 187, 161);
+  font-size: 20px;
+  opacity: 0.8;
+  transition: 0.1s;
+}
+#buttoncontinuar:hover {
+  background-color: rgb(204, 187, 161);
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+#logo {
   margin-left: 30px;
   width: 160px;
   height: auto;
@@ -60,65 +106,93 @@ header .nav-link {
   overflow: hidden;
   border-radius: 50px;
   background-color: rgb(250, 239, 224);
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
+#logo:hover {
+  opacity: 1.5;
+  transform: scale(1.06);
+}
 
-#title h1{
-  font-family: "Caveat", cursive;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10rem;
+}
+
+#title h1 {
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 120px;
-  color: rgb(39, 38, 38);
+  font-weight: 700;
+  font-size: 200px;
+  color: rgb(250, 239, 224);
 }
 
-#title button{
+#title .titlebutton {
+  margin: 0 20px;
+}
+
+#title button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.2s;
+  height: 95px;
+  width: 100px;
+  border-radius: 45px;
+  background-color: rgba(131, 128, 128, 0.349);
+  border: solid rgba(230, 230, 238, 0.068);
+  gap: 10px;
 }
 
-#title button:hover{
-  transform: scale(1.08);
-}
-
-#title .titlebutton img {
-  height: 150px;
-  width: 150px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50px;
-}
-
-#title .titlebutton{
-  transition: all 0.2s;
-  background-color: rgba(25, 25, 32, 0.349);
-  border:solid rgba(17, 0, 255, 0.068);
-  border-radius: 100px;
-}
-
-#title .titlebutton:hover{
+#title button:hover {
   background-color: rgba(25, 25, 32, 0.74);
   transform: scale(1.08);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#features img {
-  height: 150px;
-  width: 150px;
+#title button img {
+  height: 60px;
+  width: 100px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
-#features .b-c {
-  transition: all 0.2s;
-  background-color: rgb(243, 243, 243);
-  border: none;
-  border-radius: 50px;
+header i {
+  color: rgb(250, 239, 224);
+  margin-right: 30px;
+  text-align: center;
+  align-items: center;
 }
 
-#features .b-c:hover {
-  background-color: rgb(200, 202, 202);
-  transform: scale(1.08);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+#features .card {
+  background-color: rgb(243, 240, 240);
+  padding: 15px;
+  border: solid rgba(190, 190, 190, 0.267);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#features .card:hover {
+  background-color: rgb(243, 240, 240);
+  transform: scale(1.06);
+  box-shadow: 2px 2px 10px rgb(143, 141, 141);
+}
+
+#features .container-prod {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#features img {
+  width: 120px;
+  height: 100px;
 }
