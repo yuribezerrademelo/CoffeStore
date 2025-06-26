@@ -13,6 +13,13 @@ body {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   background-color: rgb(39, 38, 38);
   z-index: 10;
@@ -27,7 +34,15 @@ header .nav-link {
   color: rgb(250, 239, 224);
 }
 
+header i {
+  color: rgb(250, 239, 224);
+  margin-right: 30px;
+  text-align: center;
+  align-items: center;
+}
+
 #navbar li a {
+  color: rgb(250, 239, 224);
   position: relative;
   transition: all 0.2s;
 }
@@ -40,8 +55,8 @@ header .nav-link {
 #navbar li a.active::after,
 #navbar li a:hover::after {
   content: "";
-  width: 40%;
-  height: 4px;
+  width: 50%;
+  height: .28rem;
   border-radius: 30px;
   background: rgb(250, 239, 224);
   position: absolute;
@@ -98,8 +113,11 @@ header .nav-link {
   transform: scale(1.03);
 }
 
+#logor{
+  padding-left: 20px;
+}
+
 #logo {
-  margin-left: 30px;
   width: 160px;
   height: auto;
   padding: 10px 15px;
@@ -150,23 +168,21 @@ header .nav-link {
 #title button:hover {
   background-color: rgba(25, 25, 32, 0.74);
   transform: scale(1.08);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(5, 1, 238, 0.288);
+  opa
 }
 
-#title button img {
+.titlebutton img {
   height: 60px;
   width: 100px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 30px;
+  opacity: 0.8;
 }
 
-header i {
-  color: rgb(250, 239, 224);
-  margin-right: 30px;
-  text-align: center;
-  align-items: center;
+.titlebutton img:hover {
+  opacity: 1;
 }
 
 #features .card {
