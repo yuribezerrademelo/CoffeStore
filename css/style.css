@@ -76,6 +76,7 @@ header i {
 
 #modal {
   height: 40rem;
+  width: 360px;
   position: absolute;
   left: 80%;
   top: 300px;
@@ -95,6 +96,10 @@ header i {
   border-bottom: solid rgb(204, 187, 161);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+}
+
+#bodymodal {
+  display: flex;
 }
 
 #buttoncontinuar {
@@ -212,6 +217,7 @@ header i {
   height: 100px;
 }
 
+
 #desc {
   display: flex;
   justify-content: space-between;
@@ -222,10 +228,15 @@ header i {
   margin-top: 10px;
 }
 
-
 #addcartplus {
   background-color: rgba(128, 128, 128, 0.425);
-  border-radius: .6rem;
+  border-radius: .7rem;
   padding: .4rem;
-  transition: 2s;
+  transition: 0.2s;
+  opacity: 0.9;
+}
+
+#addcartplus:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
